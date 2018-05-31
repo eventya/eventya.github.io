@@ -1,0 +1,152 @@
+
+<style type="text/css">
+  code{ white-space: pre; }
+  table, th, td {
+      border: 1px solid black;
+  }
+</style>
+
+<h1>Eventya API Documentation v1</h1>
+
+<p>Eventya API allows you to programmatically access data collected through our platform.</p>
+
+<h3>The Basics</h3>
+
+<p>The API is built in a <i>RESTful</i> way so it's endpoints consists of:</p>
+<ul>
+  <li><strong>instance</strong>: The name of the bucket of content. (can be obtain by contacting us)</li>
+  <li><strong>resource</strong>: The type of content.</li>
+  <li><strong>access_token</strong>: Secure encrypted token with which you can access the data. (can be obtain by contacting us)</li>
+  <li><strong>version</strong>: Version of the API.</li>
+</ul>
+
+<h3>Structure</h3>
+
+<p>The API is structured as a <i>json</i> web service and can be called through any library that supports the format.</p>
+<p>Basic example:</p>
+<code>GET https://api.eventya.eu/v1.0/<strong>instance</strong>/<strong>resource</strong>.json?access_token=<strong>access_token</strong></code>
+
+<h3>Resources</h3>
+
+<h4>Profiles</h4>
+<code>GET https://api.eventya.eu/v1.0/<strong>instance</strong>/profiles.json?access_token=<strong>access_token</strong></code>
+<p><strong>Output:</strong></p>
+<code>
+  {
+    "id": "uid",
+    "name": "Name of profile",
+    "cover_url": "url",
+    "logo_url": "url",
+    "categories": [
+      {
+        "category": "Category"
+      }
+    ]
+  }
+</code>
+<p><strong>Fields:</strong></p>
+<p>You can add an extra parameter <code>?fields=<strong>fields</strong></code> to append additional nodes in your output.</p>
+<p>These will apply depending on your instance's configuration:</p>
+<table>
+  <thead>
+    <tr>
+      <td>Field</td>
+      <td>Description</td>
+      <td>Output</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>has_location_tags</strong></td>
+      <td>A set of city / country tags.</td>
+      <td>
+        <code>
+          "location_tags": [
+            {
+              "name": "Kinshasa",
+              "country": "Democratic Republic of the Congo"
+            }
+          ]
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>contact_details</strong></td>
+      <td>Details like email, phone number, website url.</td>
+      <td>
+        <code>
+          "contact_details": {
+            "phone": "321321321",
+            "contact_email": "aluca@i-consult.ro"
+          }
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>features</strong></td>
+      <td>Extra features depending on the configuration of each category of profiles.</td>
+      <td>
+        <code>
+          "features": [
+            {
+              "name": "Name of feature",
+              "value": "Value"
+            },
+          ]
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>location</strong></td>
+      <td>GPS coordontates and address of the profile</td>
+      <td>
+        <code>
+          "location": {
+            "lat": "latitude",
+            "lng": "longitude",
+            "address": "Address"
+          }
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>business_hours</strong></td>
+      <td>Opening and closing hours of the profile</td>
+      <td>
+        <code>
+          "business_hours": [
+            {
+              "label": "Luni",
+              "values": [
+                [
+                  "11:00",
+                  "20:00"
+                ]
+              ]
+            }
+          ]
+        </code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>tables</strong></td>
+      <td>Extra data associated with a profile</td>
+      <td>
+        <code>
+          "tables": [
+            {
+              "name": "Name of table",
+              "image_url": "url",
+              "models": [
+                {
+                  "count": 3,
+                  "name": "Name of model"
+                }
+              ]
+            }
+          ]
+        </code>
+      </td>
+    </tr>
+  </li>
+</ul>
