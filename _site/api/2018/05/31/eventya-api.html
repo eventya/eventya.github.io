@@ -57,8 +57,9 @@
 </ul>
 
 <h2 id="structure">Structure</h2>
-<p>The API is structured as a <em>json&lt;</em> web service and can be called through any library that supports the format.
-<strong>Basic example:</strong></p>
+<p>The API is structured as a <em>json</em> web service and can be called through any library that supports the format.</p>
+
+<h4 id="basic-example">Basic example:</h4>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET
 https://api.eventya.eu/v1.0/instance/resource.json?access_token=access_token
@@ -72,20 +73,19 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 </code></pre></div></div>
 
 <h4 id="output">output:</h4>
-<hr />
 
-<pre><code class="language-JSON">{
-  "id": "uid",
-  "name": "Name of profile",
-  "cover_url": "url",
-  "logo_url": "url",
-  "categories": [
-    {
-      "category": "Category"
-    }
-  ]
-}
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uid"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of profile"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cover_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"logo_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <h4 id="fields">fields:</h4>
 <hr />
@@ -96,76 +96,76 @@ These will apply depending on your instance’s configuration:</p>
 <p><code class="highlighter-rouge">has_location_tags</code></p>
 
 <p>A set of city / country tags.</p>
-<pre><code class="language-JSON">  "location_tags": [
-    {
-      "name": "Kinshasa",
-      "country": "Democratic Republic of the Congo"
-    }
-  ]
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"location_tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kinshasa"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Democratic Republic of the Congo"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">contact_details</code></p>
 
 <p>Details like email, phone number, website url.</p>
-<pre><code class="language-JSON">  "contact_details": {
-    "phone": "321321321",
-    "contact_email": "aluca@i-consult.ro"
-  }
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"contact_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321321321"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contact_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aluca@i-consult.ro"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">features</code></p>
 
 <p>Extra features depending on the configuration of each category of profiles.</p>
-<pre><code class="language-JSON">  "features": [
-    {
-      "name": "Name of feature",
-      "value": "Value"
-    },
-  ]
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of feature"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">location</code></p>
 
 <p>GPS coordontates and address of the profile.</p>
-<pre><code class="language-JSON">  "location": {
-    "lat": "latitude",
-    "lng": "longitude",
-    "address": "Address"
-  }
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latitude"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"longitude"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Address"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">business_hours</code></p>
 
 <p>Opening and closing hours of the profile.</p>
-<pre><code class="language-JSON">  "business_hours": [
-    {
-      "label": "Luni",
-      "values": [
-        [
-          "11:00",
-          "20:00"
-        ]
-      ]
-    }
-  ]
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"business_hours"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luni"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"11:00"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"20:00"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
 <p><code class="highlighter-rouge">tables</code></p>
 
 <p>Extra data associated with a profile.</p>
-<pre><code class="language-JSON">  "tables": [
-    {
-      "name": "Name of table",
-      "image_url": "url",
-      "models": [
-        {
-          "count": 3,
-          "name": "Name of model"
-        }
-      ]
-    }
-  ]
-</code></pre>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"tables"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of table"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"models"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of model"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
 
   </div><a class="u-url" href="/api/2018/05/31/eventya-api.html" hidden></a>
 </article>

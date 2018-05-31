@@ -15,8 +15,9 @@ The API is built in a *RESTful* way, it's endpoints consists of:
 
 Structure
 ---
-The API is structured as a *json<* web service and can be called through any library that supports the format.
-**Basic example:**
+The API is structured as a *json* web service and can be called through any library that supports the format.
+
+#### Basic example:
 
 ```
 GET
@@ -35,9 +36,8 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 ```
 
 #### output:
-***
 
-```JSON
+```json
 {
   "id": "uid",
   "name": "Name of profile",
@@ -61,7 +61,7 @@ These will apply depending on your instance's configuration:
 `has_location_tags`
 
 A set of city / country tags.
-``` JSON
+``` json
   "location_tags": [
     {
       "name": "Kinshasa",
@@ -74,7 +74,7 @@ A set of city / country tags.
 `contact_details`
 
 Details like email, phone number, website url.
-``` JSON
+``` json
   "contact_details": {
     "phone": "321321321",
     "contact_email": "aluca@i-consult.ro"
@@ -85,7 +85,7 @@ Details like email, phone number, website url.
 `features`
 
 Extra features depending on the configuration of each category of profiles.
-``` JSON
+``` json
   "features": [
     {
       "name": "Name of feature",
@@ -98,7 +98,7 @@ Extra features depending on the configuration of each category of profiles.
 `location`
 
 GPS coordontates and address of the profile.
-``` JSON
+``` json
   "location": {
     "lat": "latitude",
     "lng": "longitude",
@@ -110,7 +110,7 @@ GPS coordontates and address of the profile.
 `business_hours`
 
 Opening and closing hours of the profile.
-``` JSON
+``` json
   "business_hours": [
     {
       "label": "Luni",
@@ -128,7 +128,7 @@ Opening and closing hours of the profile.
 `tables`
 
 Extra data associated with a profile.
-``` JSON
+``` json
   "tables": [
     {
       "name": "Name of table",
