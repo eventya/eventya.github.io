@@ -56,9 +56,10 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 
 
 You can add an extra parameter `?fields=` to append additional nodes in your output.
+Multiple field values can be added separated by `,`.
 These will apply depending on your instance's configuration:
 
-`has_location_tags`
+`location_tags`
 
 A set of city / country tags.
 ``` json
