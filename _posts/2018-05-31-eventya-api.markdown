@@ -51,6 +51,12 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 }
 ```
 
+#### pagination:
+***
+If there are multiple pages of results you can browse by adding the parameter `?page=`.
+The value of the parameter must be an integer of at least `1`.
+
+
 #### fields:
 ***
 
@@ -58,6 +64,26 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 You can add an extra parameter `?fields=` to append additional nodes in your output.
 Multiple field values can be added separated by `,`.
 These will apply depending on your instance's configuration:
+
+`description`
+
+Description of the profile.
+``` json
+  "description": "The description"
+```
+
+
+`gallery`
+
+Gallery of images of the profile.
+``` json
+  "gallery": [
+    {
+      "url": "url"
+    }
+  ]
+```
+
 
 `location_tags`
 
