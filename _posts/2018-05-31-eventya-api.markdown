@@ -91,6 +91,7 @@ A set of city / country tags.
 ``` json
   "location_tags": [
     {
+      "id": 3,
       "name": "Kinshasa",
       "country": "Democratic Republic of the Congo"
     }
@@ -168,4 +169,40 @@ Extra data associated with a profile.
       ]
     }
   ]
+```
+
+#### filters:
+***
+
+You can filter the list of results by setting the parameter `?filter=`.
+Below are a list of available filters:
+
+`with_location_tag id_of_location_tag`
+
+Example of usage: `?filter=with_location_tag 3` It will give you a list of Profiles that are related to the location-tag with id 3.
+
+---
+#### Location Tag
+
+```
+GET
+https://api.eventya.eu/v1.0/instance/location_tags.json?access_token=access_token
+```
+
+#### output:
+
+```json
+{
+  "countries": [
+    {
+      "name": "Name of country",
+      "cities": [
+        {
+          "id": 3,
+          "name": "Name of city"
+        }
+      ]
+    }
+  ]
+}
 ```
