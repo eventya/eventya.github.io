@@ -56,6 +56,9 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 If there are multiple pages of results you can browse by adding the parameter `?page=`.
 The value of the parameter must be an integer of at least `1`.
 
+You can specify how many items per page there can be using `?per_page=`.
+The maximum allowed number is 10.
+
 
 #### fields:
 ***
