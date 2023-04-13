@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "API Documentation"
-date:   2018-05-31 16:10:07 +0300
+title:  "Eventys API Documentation"
+date:   2023-03-06 11:10:07 +0300
 categories: api
 ---
 
@@ -28,11 +28,11 @@ https://api.eventya.eu/v1.0/instance/resource.json?access_token=access_token
 
 Resources
 ---
-#### Profiles
+#### Events
 
 ```
 GET
-https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
+https://api.eventya.eu/v1.0/instance/events.json?access_token=access_token
 ```
 
 #### output:
@@ -40,14 +40,17 @@ https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 ```json
 {
   "id": "uid",
-  "name": "Name of profile",
+  "name": "Name of event",
   "cover_url": "url",
-  "logo_url": "url",
   "categories": [
     {
       "category": "Category"
     }
-  ]
+  ],
+  "date": {
+    "start_at": "timestamp",
+    "end_at": "timestamp"
+  }
 }
 ```
 
@@ -76,41 +79,6 @@ Description of the profile.
 ```
 
 
-`gallery`
-
-Gallery of images of the profile.
-``` json
-  "gallery": [
-    {
-      "url": "url"
-    }
-  ]
-```
-
-`contact_details`
-
-Details like email, phone number, website url.
-``` json
-  "contact_details": {
-    "phone": "321321321",
-    "contact_email": "aluca@i-consult.ro"
-  }
-```
-
-
-`features`
-
-Extra features depending on the configuration of each category of profiles.
-``` json
-  "features": [
-    {
-      "name": "Name of feature",
-      "value": "Value"
-    },
-  ]
-```
-
-
 `location`
 
 GPS coordontates and address of the profile.
@@ -123,26 +91,14 @@ GPS coordontates and address of the profile.
 ```
 
 
-`business_hours`
-
-Opening and closing hours of the profile.
-``` json
-  "business_hours": [
-    {
-      "label": "Luni",
-      "values": [
-        [
-          "11:00",
-          "20:00"
-        ]
-      ]
-    }
-  ]
-```
-
-<!-- #### filters:
+#### filters:
 ***
 
 You can filter the list of results by setting the parameter `?filter=`.
+Below are a list of available filters:
 
---- -->
+`past`
+
+Example of usage: `?filter=past` It will give you a list of Eventys that are have been completed
+
+---
