@@ -47,7 +47,7 @@ https://api.eventya.eu/v1.0/instance/events.json?access_token=access_token
       "category": "Category"
     }
   ],
-  "date": {
+  "datetimes": {
     "start_at": "timestamp",
     "end_at": "timestamp"
   }
