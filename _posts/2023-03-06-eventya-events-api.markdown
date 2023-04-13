@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Eventys API Documentation"
+title:  "Events API Documentation"
 date:   2023-03-06 11:10:07 +0300
 categories: api
 ---
@@ -99,6 +99,6 @@ Below are a list of available filters:
 
 `past`
 
-Example of usage: `?filter=past` It will give you a list of Eventys that are have been completed
+Example of usage: `?filter=past` It will give you a list of Events that are have been completed
 
 ---
