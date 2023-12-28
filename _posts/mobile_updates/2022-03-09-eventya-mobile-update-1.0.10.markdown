@@ -2,7 +2,7 @@
 layout: post
 title:  "Mobile version 1.0.10"
 date:   2022-03-09 10:00:00 +0300
-categories: mobile application
+categories: mobile_update
 ---
 
 Changelog

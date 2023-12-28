@@ -1,16 +1,15 @@
 ---
-layout: page
+layout: default
 title: Mobile Updates
 permalink: /mobile_updates/
 ---
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <p>Categories: {{ post.categories | jsonify }}</p>
-      <p>{{ post.content | markdownify | strip_html | truncatewords: 30 }}</p>
-    </li>
+    {% if post.title contains 'Mobile version' %}
+      <li>
+        <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
