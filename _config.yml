@@ -27,7 +27,9 @@ theme: minima
 plugins:
   - jekyll-feed
 include:
-  - _pages
+  - _mobile_updates
+header_pages:
+  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

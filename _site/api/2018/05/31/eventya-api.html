@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>API Documentation | Eventya Documentation</title>
-<meta name="generator" content="Jekyll v3.7.3" />
+<meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="API Documentation" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Basics The API is built in a RESTful way, it’s endpoints consists of: instance: The name of the bucket of content. (can be obtain by contacting us) resource: The type of content. access_token: Secure encrypted token with which you can access the data. (can be obtain by contacting us) version: Version of the API." />
@@ -14,8 +14,10 @@
 <meta property="og:site_name" content="Eventya Documentation" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-31T16:10:07+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="API Documentation" />
 <script type="application/ld+json">
-{"description":"The Basics The API is built in a RESTful way, it’s endpoints consists of: instance: The name of the bucket of content. (can be obtain by contacting us) resource: The type of content. access_token: Secure encrypted token with which you can access the data. (can be obtain by contacting us) version: Version of the API.","@type":"BlogPosting","url":"http://localhost:4000/api/2018/05/31/eventya-api.html","headline":"API Documentation","dateModified":"2018-05-31T16:10:07+03:00","datePublished":"2018-05-31T16:10:07+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/2018/05/31/eventya-api.html"},"@context":"http://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-05-31T16:10:07+03:00","datePublished":"2018-05-31T16:10:07+03:00","description":"The Basics The API is built in a RESTful way, it’s endpoints consists of: instance: The name of the bucket of content. (can be obtain by contacting us) resource: The type of content. access_token: Secure encrypted token with which you can access the data. (can be obtain by contacting us) version: Version of the API.","headline":"API Documentation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/2018/05/31/eventya-api.html"},"url":"http://localhost:4000/api/2018/05/31/eventya-api.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Eventya Documentation" /></head>
 <body><header class="site-header" role="banner">
@@ -25,9 +27,7 @@
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
             </svg>
           </span>
         </label>
@@ -61,86 +61,100 @@
 
 <h4 id="basic-example">Basic example:</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET
 https://api.eventya.eu/v1.0/instance/resource.json?access_token=access_token
 </code></pre></div></div>
 
 <h2 id="resources">Resources</h2>
 <h4 id="profiles">Profiles</h4>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET
 https://api.eventya.eu/v1.0/instance/profiles.json?access_token=access_token
 </code></pre></div></div>
 
 <h4 id="output">output:</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uid"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of profile"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cover_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"logo_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uid"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of profile"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cover_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"logo_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category"</span><span class="w">
+      </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Category"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
+<h4 id="pagination">pagination:</h4>
+<hr />
+<p>If there are multiple pages of results you can browse by adding the parameter <code class="language-plaintext highlighter-rouge">?page=</code>.
+The value of the parameter must be an integer of at least <code class="language-plaintext highlighter-rouge">1</code>.</p>
+
+<p>You can specify how many items per page there can be using <code class="language-plaintext highlighter-rouge">?per_page=</code>.
+The maximum allowed number is 10.</p>
+
 <h4 id="fields">fields:</h4>
 <hr />
 
-<p>You can add an extra parameter <code class="highlighter-rouge">?fields=</code> to append additional nodes in your output.
+<p>You can add an extra parameter <code class="language-plaintext highlighter-rouge">?fields=</code> to append additional nodes in your output.
+Multiple field values can be added separated by <code class="language-plaintext highlighter-rouge">,</code>.
 These will apply depending on your instance’s configuration:</p>
 
-<p><code class="highlighter-rouge">has_location_tags</code></p>
+<p><code class="language-plaintext highlighter-rouge">description</code></p>
 
-<p>A set of city / country tags.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"location_tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<p>Description of the profile.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The description"</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">gallery</code></p>
+
+<p>Gallery of images of the profile.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"gallery"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kinshasa"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Democratic Republic of the Congo"</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">contact_details</code></p>
+<p><code class="language-plaintext highlighter-rouge">contact_details</code></p>
 
 <p>Details like email, phone number, website url.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"contact_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321321321"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"contact_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aluca@i-consult.ro"</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"contact_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321321321"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"contact_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aluca@i-consult.ro"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">features</code></p>
+<p><code class="language-plaintext highlighter-rouge">features</code></p>
 
 <p>Extra features depending on the configuration of each category of profiles.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of feature"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of feature"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Value"</span><span class="w">
     </span><span class="p">},</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">location</code></p>
+<p><code class="language-plaintext highlighter-rouge">location</code></p>
 
 <p>GPS coordontates and address of the profile.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latitude"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"lng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"longitude"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Address"</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latitude"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lng"</span><span class="p">:</span><span class="w"> </span><span class="s2">"longitude"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Address"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">business_hours</code></p>
+<p><code class="language-plaintext highlighter-rouge">business_hours</code></p>
 
 <p>Opening and closing hours of the profile.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"business_hours"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"business_hours"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luni"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luni"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">[</span><span class="w">
           </span><span class="s2">"11:00"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"20:00"</span><span class="w">
@@ -150,22 +164,12 @@ These will apply depending on your instance’s configuration:</p>
   </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
 
-<p><code class="highlighter-rouge">tables</code></p>
+<!-- #### filters:
+***
 
-<p>Extra data associated with a profile.</p>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="s2">"tables"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of table"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"image_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"url"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"models"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Name of model"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span></code></pre></div></div>
+You can filter the list of results by setting the parameter `?filter=`.
+
+--- -->
 
   </div><a class="u-url" href="/api/2018/05/31/eventya-api.html" hidden></a>
 </article>
