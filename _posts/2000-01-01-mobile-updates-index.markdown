@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: default
 title: Mobile Applications Updates
-date: 2000-01-31 12:00:00 +0300
+date: 2000-01-01 12:00:00 +0300
 permalink: /mobile_updates/
 ---
 
