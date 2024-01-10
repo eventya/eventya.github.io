@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-03T13:47:55+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eventya Documentation</title><subtitle>Eventya coding standards and best practices</subtitle><entry><title type="html">Events API Documentation</title><link href="http://localhost:4000/api/2023/03/06/eventya-events-api.html" rel="alternate" type="text/html" title="Events API Documentation" /><published>2023-03-06T10:10:07+02:00</published><updated>2023-03-06T10:10:07+02:00</updated><id>http://localhost:4000/api/2023/03/06/eventya-events-api</id><content type="html" xml:base="http://localhost:4000/api/2023/03/06/eventya-events-api.html">&lt;h2 id=&quot;the-basics&quot;&gt;The Basics&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-10T09:24:29+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eventya Documentation</title><subtitle>Eventya coding standards and best practices</subtitle><entry><title type="html">Events API Documentation</title><link href="http://localhost:4000/api/2023/03/06/eventya-events-api.html" rel="alternate" type="text/html" title="Events API Documentation" /><published>2023-03-06T10:10:07+02:00</published><updated>2023-03-06T10:10:07+02:00</updated><id>http://localhost:4000/api/2023/03/06/eventya-events-api</id><content type="html" xml:base="http://localhost:4000/api/2023/03/06/eventya-events-api.html">&lt;h2 id=&quot;the-basics&quot;&gt;The Basics&lt;/h2&gt;
 &lt;p&gt;The API is built in a &lt;em&gt;RESTful&lt;/em&gt; way, it’s endpoints consists of:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;instance&lt;/strong&gt;: The name of the bucket of content. (can be obtain by contacting us)&lt;/li&gt;
@@ -531,7 +531,9 @@ You can filter the list of results by setting the parameter `?filter=`.
     
   
     
-  
+    &lt;li&gt;
+      &lt;h3&gt;&lt;a class=&quot;post-link&quot; href=&quot;/_mobile_updates/2024-01-05-eventya-mobile-update-1.4.16.html&quot;&gt;Mobile version 1.4.16&lt;/a&gt;&lt;/h3&gt;
+    &lt;/li&gt;
     
   
     
@@ -540,4 +542,8 @@ You can filter the list of results by setting the parameter `?filter=`.
   
     
   
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Mobile version 1.0.10 Mobile version 1.0.11 Mobile version 1.0.12 Mobile version 1.0.13 Mobile version 1.0.14 Mobile version 1.0.15 Mobile version 1.0.16 Mobile version 1.0.17 Mobile version 1.0.18 Mobile version 1.0.19 Mobile version 1.1.0 Mobile version 1.1.1 Mobile version 1.1.2 Mobile version 1.1.3 Mobile version 1.1.4 Mobile version 1.1.5 Mobile version 1.1.6 Mobile version 1.1.7 Mobile version 1.1.8 Mobile version 1.1.9 Mobile version 1.1.10 Mobile version 1.1.11 Mobile version 1.1.12 Mobile version 1.1.13 Mobile version 1.1.14 Mobile version 1.2.0 Mobile version 1.2.1 Mobile version 1.2.2 Mobile version 1.2.3 Mobile version 1.2.4 Mobile version 1.2.5 Mobile version 1.2.6 Mobile version 1.2.7 Mobile version 1.2.8 Mobile version 1.2.9 Mobile version 1.2.10 Mobile version 1.3.0 Mobile version 1.3.1 Mobile version 1.4.0 Mobile version 1.4.1 Mobile version 1.4.2 Mobile version 1.4.3 Mobile version 1.4.4 Mobile version 1.4.5 Mobile version 1.4.6 Mobile version 1.4.7 Mobile version 1.4.8 Mobile version 1.4.9 Mobile version 1.4.10 Mobile version 1.4.11 Mobile version 1.4.12 Mobile version 1.4.13 Mobile version 1.4.14 Mobile version 1.4.15</summary></entry></feed>
+    
+  
+    
+  
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Mobile version 1.0.10 Mobile version 1.0.11 Mobile version 1.0.12 Mobile version 1.0.13 Mobile version 1.0.14 Mobile version 1.0.15 Mobile version 1.0.16 Mobile version 1.0.17 Mobile version 1.0.18 Mobile version 1.0.19 Mobile version 1.1.0 Mobile version 1.1.1 Mobile version 1.1.2 Mobile version 1.1.3 Mobile version 1.1.4 Mobile version 1.1.5 Mobile version 1.1.6 Mobile version 1.1.7 Mobile version 1.1.8 Mobile version 1.1.9 Mobile version 1.1.10 Mobile version 1.1.11 Mobile version 1.1.12 Mobile version 1.1.13 Mobile version 1.1.14 Mobile version 1.2.0 Mobile version 1.2.1 Mobile version 1.2.2 Mobile version 1.2.3 Mobile version 1.2.4 Mobile version 1.2.5 Mobile version 1.2.6 Mobile version 1.2.7 Mobile version 1.2.8 Mobile version 1.2.9 Mobile version 1.2.10 Mobile version 1.3.0 Mobile version 1.3.1 Mobile version 1.4.0 Mobile version 1.4.1 Mobile version 1.4.2 Mobile version 1.4.3 Mobile version 1.4.4 Mobile version 1.4.5 Mobile version 1.4.6 Mobile version 1.4.7 Mobile version 1.4.8 Mobile version 1.4.9 Mobile version 1.4.10 Mobile version 1.4.11 Mobile version 1.4.12 Mobile version 1.4.13 Mobile version 1.4.14 Mobile version 1.4.15 Mobile version 1.4.16</summary></entry></feed>
