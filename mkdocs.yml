@@ -1,5 +1,4 @@
 site_name: Docs
-site_url: https://eventya.github.io
 theme:
   name: material
   logo: images/logo_eventya_white.png
