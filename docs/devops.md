@@ -1,4 +1,4 @@
-# Eventya CI/CD Workflow with GitHub Actions
+# Continuous Integration
 
 This documentation explains the workflow for creating releases in our project using GitHub Actions. Below is a step-by-step explanation of its functionality, including branch naming conventions, PR requirements, and the automated tasks performed by the workflow.
 
@@ -16,11 +16,11 @@ This workflow automates the process of:
 
 To visualize the release process, we have created a diagram that outlines branch naming conventions, PR requirements, and the automated tasks handled by the GitHub Actions workflow.
 
-**Figure 1: CI/CD Workflow Diagram**
+**Figure 1: CI Workflow Diagram**
 
-![CI/CD Workflow Diagram](/images/workflow_diagram.png)
+![CI Workflow Diagram](/images/workflow_diagram.png)
 
-## 1. Branching Strategy
+## 1. Branches naming convention
 
 The project follows a clear branch naming convention for organization and consistency:
 
@@ -153,4 +153,3 @@ The Create Release workflow is a powerful system for managing software releases.
 * **Traceability**: Links to PRs and descriptions provide full visibility into each release.
 
 By following this process, development teams can focus on delivering high-quality features and fixes while maintaining a transparent and predictable release process.
-

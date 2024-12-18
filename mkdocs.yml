@@ -4,14 +4,15 @@ theme:
   logo: images/logo_eventya_white.png
   features:
     - navigation.sections
+    - content.code.copy
   palette:
-    - scheme: slate
-      primary: teal
-      accent: deep purple
+    - scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: default
+    - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
