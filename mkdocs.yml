@@ -5,13 +5,13 @@ theme:
   features:
     - navigation.sections
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - scheme: slate
+      primary: teal
+      accent: deep purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
+    - scheme: default
       primary: indigo
       accent: indigo
       toggle:
@@ -25,3 +25,22 @@ markdown_extensions:
       permalink: true
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
